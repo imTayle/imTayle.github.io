@@ -129,6 +129,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Tomcat7数据源加密方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/08/Tomcat7数据源加密方案/">Tomcat7数据源加密方案</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/08/Tomcat7数据源加密方案/" class="archive-article-date">
+  	<time datetime="2018-08-08T06:27:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+	
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>将tomcat-jdbc导出jar包，添加到Tomcat\lib,删除原来tomcat-jdbc.jar包。<br>++++</li>
+<li><p>生成加密字符串[]里的内容，进入Tomcat\lib目录执行命令（XXX为要加密的字符串）。<br> <code>java -cp datasource.jar com.datasource.security.encrypt.CipherEncrypter XXX</code></p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg：java -cp datasource.jar com.datasource.security.encrypt.CipherEncrypter jdbc:mysql:<span class="comment">//192.168.36.102:3306/nmfs?characterEncoding=UTF-8</span></span><br><span class="line">	encrypted string : [ckOGK78fJc1Q18eYtSA6rkPI9/EiqBlNYYtcGrb8hFlkHaVVYI2sOwCLjpcTozdXCrXTx3DVVhbEwujJeszsXw==]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改context.xml中username、url、password为加密后的密文。</p>
+</li>
+<li><p>如果需要修改其他版本的tomcat找到对应版本的tomcat-jdbc源码</p>
+<ul>
+<li>添加CipherEncrypter类。</li>
+<li>按需修改DataSourceFactory.java中对应设置username、url、password方法。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">		   </span><br><span class="line"> value = properties.getProperty(PROP_PASSWORD);</span><br><span class="line"><span class="keyword">if</span> (value != <span class="keyword">null</span>) &#123;</span><br><span class="line">    poolProperties.setPassword(CipherEncrypter.decrypt(value));</span><br><span class="line">&#125;</span><br><span class="line">value = properties.getProperty(PROP_URL);</span><br><span class="line"><span class="keyword">if</span> (value != <span class="keyword">null</span>) &#123;</span><br><span class="line">    poolProperties.setUrl(CipherEncrypter.decrypt(value));</span><br><span class="line">&#125;</span><br><span class="line">value = properties.getProperty(PROP_USERNAME);</span><br><span class="line"><span class="keyword">if</span> (value != <span class="keyword">null</span>) &#123;</span><br><span class="line">    poolProperties.setUsername(CipherEncrypter.decrypt(value));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>context.xml文件中配置<br><code>factory=&quot;org.apache.tomcat.jdbc.pool.DataSourceFactory&quot;</code></p>
+</li>
+<li>当前源码对应版本apache-tomcat-7.0.82</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">原创</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/08/Tomcat7数据源加密方案/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-用于测试功能页面" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -406,6 +506,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">tag</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
