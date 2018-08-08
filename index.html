@@ -155,9 +155,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>将tomcat-jdbc导出jar包，添加到Tomcat\lib,删除原来tomcat-jdbc.jar包。<br>++++</li>
+<li>将tomcat-jdbc导出jar包，添加到Tomcat\lib,删除原来tomcat-jdbc.jar包。</li>
+</ul>
+<hr>
+<ul>
 <li><p>生成加密字符串[]里的内容，进入Tomcat\lib目录执行命令（XXX为要加密的字符串）。<br> <code>java -cp datasource.jar com.datasource.security.encrypt.CipherEncrypter XXX</code></p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg：java -cp datasource.jar com.datasource.security.encrypt.CipherEncrypter jdbc:mysql:<span class="comment">//192.168.36.102:3306/nmfs?characterEncoding=UTF-8</span></span><br><span class="line">	encrypted string : [ckOGK78fJc1Q18eYtSA6rkPI9/EiqBlNYYtcGrb8hFlkHaVVYI2sOwCLjpcTozdXCrXTx3DVVhbEwujJeszsXw==]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改context.xml中username、url、password为加密后的密文。</p>
 </li>
@@ -367,11 +369,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">原创</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">原创</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -497,6 +499,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">原创</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -506,14 +516,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">tag</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">原创</a>
               </li>
             
             <div class="clearfix"></div>
