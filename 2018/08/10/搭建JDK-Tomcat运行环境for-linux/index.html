@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imTayle.github.io">
-  <title>Tag: tag | IT_奶爸</title>
+  <title>搭建JDK+Tomcat运行环境for linux | IT_奶爸</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一边育儿一边码代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IT_奶爸">
-<meta property="og:url" content="http://imTayle.github.io/tags/tag/index.html">
+  <meta name="description" content="Tomcat jdk 安装包准备打开Apache官网选择相应的安装包下载，点此直接下载Tomcat7打开Oracle官方网站选择相应的安装包下载，点此直接下载JDK8">
+<meta name="keywords" content="Tomcat,代码,linux环境配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建JDK+Tomcat运行环境for linux">
+<meta property="og:url" content="http://imTayle.github.io/2018/08/10/搭建JDK-Tomcat运行环境for-linux/index.html">
 <meta property="og:site_name" content="IT_奶爸">
-<meta property="og:description" content="一边育儿一边码代码">
+<meta property="og:description" content="Tomcat jdk 安装包准备打开Apache官网选择相应的安装包下载，点此直接下载Tomcat7打开Oracle官方网站选择相应的安装包下载，点此直接下载JDK8">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-11T14:38:14.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IT_奶爸">
-<meta name="twitter:description" content="一边育儿一边码代码">
+<meta name="twitter:title" content="搭建JDK+Tomcat运行环境for linux">
+<meta name="twitter:description" content="Tomcat jdk 安装包准备打开Apache官网选择相应的安装包下载，点此直接下载Tomcat7打开Oracle官方网站选择相应的安装包下载，点此直接下载JDK8">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -32,7 +34,18 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?63fa4944c43894c9fa7c25e1580d94e";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 
 <body>
@@ -54,6 +67,12 @@
 		<nav class="header-menu">
 			<ul>
 			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/育儿/">育儿</a></li>
+	        
+				<li><a href="/tags/代码/">代码</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -98,6 +117,12 @@
 			
 			
 			
+				
+			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -111,9 +136,15 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/育儿/">育儿</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/代码/">代码</a></li>
+		        
 				</ul>
 			</nav>
 		</header>				
@@ -127,69 +158,234 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-搭建JDK-Tomcat运行环境for-linux" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/用于测试功能页面/" class="archive-article-date">
-  	<time datetime="2018-07-27T06:49:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/用于测试功能页面/">用于测试功能页面</a>
+    <h1 class="article-title" itemprop="name">
+      搭建JDK+Tomcat运行环境for linux
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/10/搭建JDK-Tomcat运行环境for-linux/" class="archive-article-date">
+  	<time datetime="2018-08-10T02:27:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat-jdk-安装包准备"><span class="toc-number">1.</span> <span class="toc-text">Tomcat jdk 安装包准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开Apache官网"><span class="toc-number">1.1.</span> <span class="toc-text">打开Apache官网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择相应的安装包下载，点此直接下载Tomcat7"><span class="toc-number">1.2.</span> <span class="toc-text">选择相应的安装包下载，点此直接下载Tomcat7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打开Oracle官方网站"><span class="toc-number">1.3.</span> <span class="toc-text">打开Oracle官方网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择相应的安装包下载，点此直接下载JDK8"><span class="toc-number">1.4.</span> <span class="toc-text">选择相应的安装包下载，点此直接下载JDK8</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JDK-环境变量设置"><span class="toc-number">2.</span> <span class="toc-text">JDK 环境变量设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解押jdk包"><span class="toc-number">2.1.</span> <span class="toc-text">解押jdk包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移到相应的位置"><span class="toc-number">2.2.</span> <span class="toc-text">移到相应的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#备份系统环境变量"><span class="toc-number">2.3.</span> <span class="toc-text">备份系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑系统环境变量"><span class="toc-number">2.4.</span> <span class="toc-text">编辑系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#执行命令使配置生效"><span class="toc-number">2.5.</span> <span class="toc-text">执行命令使配置生效</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat-环境变量设置"><span class="toc-number">3.</span> <span class="toc-text">Tomcat 环境变量设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在”-Tomcat”-conf目录下创建Catalina-localhost"><span class="toc-number">3.1.</span> <span class="toc-text">在”#Tomcat”/conf目录下创建Catalina/localhost</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传一个Context文件，"><span class="toc-number">3.2.</span> <span class="toc-text">上传一个Context文件，</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#alias快捷命令"><span class="toc-number">4.</span> <span class="toc-text">alias快捷命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#切换到用户目录"><span class="toc-number">4.1.</span> <span class="toc-text">切换到用户目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加以下快捷方式与变量"><span class="toc-number">4.2.</span> <span class="toc-text">添加以下快捷方式与变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使配置生效"><span class="toc-number">4.3.</span> <span class="toc-text">使配置生效</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
+<!-- 目录内容结束 -->
+	
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Tomcat-jdk-安装包准备"><a href="#Tomcat-jdk-安装包准备" class="headerlink" title="Tomcat jdk 安装包准备"></a>Tomcat jdk 安装包准备</h1><h2 id="打开Apache官网"><a href="#打开Apache官网" class="headerlink" title="打开Apache官网"></a>打开<a href="https://tomcat.apache.org/download-70.cgi" target="_blank" rel="noopener">Apache官网</a></h2><h2 id="选择相应的安装包下载，点此直接下载Tomcat7"><a href="#选择相应的安装包下载，点此直接下载Tomcat7" class="headerlink" title="选择相应的安装包下载，点此直接下载Tomcat7"></a>选择相应的安装包下载，<a href="http://mirrors.hust.edu.cn/apache/tomcat/tomcat-7/v7.0.90/bin/apache-tomcat-7.0.90.tar.gz" target="_blank" rel="noopener">点此直接下载Tomcat7</a></h2><h2 id="打开Oracle官方网站"><a href="#打开Oracle官方网站" class="headerlink" title="打开Oracle官方网站"></a>打开<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">Oracle官方网站</a></h2><h2 id="选择相应的安装包下载，点此直接下载JDK8"><a href="#选择相应的安装包下载，点此直接下载JDK8" class="headerlink" title="选择相应的安装包下载，点此直接下载JDK8"></a>选择相应的安装包下载，<a href="http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz?AuthParam=1533868716_3c257cf3128ee66b6cef6fd01f560a04" target="_blank" rel="noopener">点此直接下载JDK8</a></h2><a id="more"></a>
+<h1 id="JDK-环境变量设置"><a href="#JDK-环境变量设置" class="headerlink" title="JDK 环境变量设置"></a>JDK 环境变量设置</h1><h2 id="解押jdk包"><a href="#解押jdk包" class="headerlink" title="解押jdk包"></a>解押jdk包</h2><p><code>tar zxvf jdk-7u79-linux-x64.tar.gz</code></p>
+<h2 id="移到相应的位置"><a href="#移到相应的位置" class="headerlink" title="移到相应的位置"></a>移到相应的位置</h2><p><code>mv jdk1.7.0_79 /usr/local/jdk1.7.0_79</code></p>
+<h2 id="备份系统环境变量"><a href="#备份系统环境变量" class="headerlink" title="备份系统环境变量"></a>备份系统环境变量</h2><p><code>cp /etc/profile /etc/profile.bak</code></p>
+<h2 id="编辑系统环境变量"><a href="#编辑系统环境变量" class="headerlink" title="编辑系统环境变量"></a>编辑系统环境变量</h2><p> <code>vi /etc/profile</code> 输入i 加入内容如下<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVAHOME</span>=/usr/local/jdk1.7.079</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">CLASSPATH</span>=.:$JAVAHOME/lib/dt.jar:$JAVAHOME/lib/tools.jar</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$JAVA_HOME</span>/bin:$PATH</span><br></pre></td></tr></table></figure></p>
+<pre><code>_注意标点符号，JAVA_HOME是刚才mv到路径_
+</code></pre><h2 id="执行命令使配置生效"><a href="#执行命令使配置生效" class="headerlink" title="执行命令使配置生效"></a>执行命令使配置生效</h2><p><code>source profile</code></p>
+<h1 id="Tomcat-环境变量设置"><a href="#Tomcat-环境变量设置" class="headerlink" title="Tomcat 环境变量设置"></a>Tomcat 环境变量设置</h1><h2 id="在”-Tomcat”-conf目录下创建Catalina-localhost"><a href="#在”-Tomcat”-conf目录下创建Catalina-localhost" class="headerlink" title="在”#Tomcat”/conf目录下创建Catalina/localhost"></a>在”#Tomcat”/conf目录下创建Catalina/localhost</h2><h2 id="上传一个Context文件，"><a href="#上传一个Context文件，" class="headerlink" title="上传一个Context文件，"></a>上传一个Context文件，</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/xxx"</span> <span class="attr">docBase</span>=<span class="string">"/home/xxx/webapp/xxx"</span> <span class="attr">debug</span>=<span class="string">"5"</span> <span class="attr">reloadable</span>=<span class="string">"true"</span> <span class="attr">crossContext</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Resource</span></span></span><br><span class="line"><span class="tag">     <span class="attr">name</span>=<span class="string">"jdbc/als"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">auth</span>=<span class="string">"Container"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">type</span>=<span class="string">"javax.sql.DataSource"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">maxActive</span>=<span class="string">"200"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">maxIdle</span>=<span class="string">"30"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">maxWait</span>=<span class="string">"10000"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">username</span>=<span class="string">"xxx"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">password</span>=<span class="string">"xxx-2016"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">driverClassName</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">url</span>=<span class="string">"jdbc:mysql://xxx.xxx.xxx.xxx"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>说明</strong>：docBase为项目部署路径，path为项目名称，reloadable为热加载，Resource为对应数据源。</p>
+<h1 id="alias快捷命令"><a href="#alias快捷命令" class="headerlink" title="alias快捷命令"></a>alias快捷命令</h1><h2 id="切换到用户目录"><a href="#切换到用户目录" class="headerlink" title="切换到用户目录"></a>切换到用户目录</h2><p><code>cd /home/xxx</code></p>
+<h2 id="添加以下快捷方式与变量"><a href="#添加以下快捷方式与变量" class="headerlink" title="添加以下快捷方式与变量"></a>添加以下快捷方式与变量</h2><p><code>vi .bash_profile</code></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">alias <span class="attribute">ss</span>=<span class="string">'ps -ef|grep java|grep -v grep|grep tomcat'</span></span><br><span class="line"><span class="attribute">CATALINA_HOME</span>=<span class="string">'/usr/local/Tomcat7'</span></span><br><span class="line">alias <span class="attribute">tm</span>=<span class="string">'cd $CATALINA_HOME'</span></span><br><span class="line">alias <span class="attribute">tmout</span>=<span class="string">'tail -f $CATALINA_HOME/logs/catalina.out'</span></span><br><span class="line">alias <span class="attribute">tmstart</span>=<span class="string">'$CATALINA_HOME/bin/startup.sh'</span></span><br><span class="line">alias <span class="attribute">tmstop</span>=<span class="string">'$CATALINA_HOME/bin/shutdown.sh'</span></span><br><span class="line">alias <span class="attribute">tmconf</span>=<span class="string">'vim $CATALINA_HOME/conf/server.xml'</span></span><br><span class="line">alias <span class="attribute">tmclear</span>=<span class="string">'rm -rf $CATALINA_HOME/work/*'</span></span><br><span class="line">alias <span class="attribute">shrc</span>=<span class="string">'vim ~/.bash_profile'</span></span><br><span class="line">alias <span class="attribute">shs</span>=<span class="string">'source ~/.bash_profile'</span></span><br></pre></td></tr></table></figure>
+<h2 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h2><p><code>source ~/.bash_profile</code> </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代码</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tag</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">linux环境配置</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://imTayle.github.io/2018/08/10/搭建JDK-Tomcat运行环境for-linux/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/08/Tomcat7数据源加密方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Tomcat7数据源加密方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat-jdk-安装包准备"><span class="toc-number">1.</span> <span class="toc-text">Tomcat jdk 安装包准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开Apache官网"><span class="toc-number">1.1.</span> <span class="toc-text">打开Apache官网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择相应的安装包下载，点此直接下载Tomcat7"><span class="toc-number">1.2.</span> <span class="toc-text">选择相应的安装包下载，点此直接下载Tomcat7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打开Oracle官方网站"><span class="toc-number">1.3.</span> <span class="toc-text">打开Oracle官方网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择相应的安装包下载，点此直接下载JDK8"><span class="toc-number">1.4.</span> <span class="toc-text">选择相应的安装包下载，点此直接下载JDK8</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JDK-环境变量设置"><span class="toc-number">2.</span> <span class="toc-text">JDK 环境变量设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解押jdk包"><span class="toc-number">2.1.</span> <span class="toc-text">解押jdk包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移到相应的位置"><span class="toc-number">2.2.</span> <span class="toc-text">移到相应的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#备份系统环境变量"><span class="toc-number">2.3.</span> <span class="toc-text">备份系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑系统环境变量"><span class="toc-number">2.4.</span> <span class="toc-text">编辑系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#执行命令使配置生效"><span class="toc-number">2.5.</span> <span class="toc-text">执行命令使配置生效</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat-环境变量设置"><span class="toc-number">3.</span> <span class="toc-text">Tomcat 环境变量设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在”-Tomcat”-conf目录下创建Catalina-localhost"><span class="toc-number">3.1.</span> <span class="toc-text">在”#Tomcat”/conf目录下创建Catalina/localhost</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传一个Context文件，"><span class="toc-number">3.2.</span> <span class="toc-text">上传一个Context文件，</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#alias快捷命令"><span class="toc-number">4.</span> <span class="toc-text">alias快捷命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#切换到用户目录"><span class="toc-number">4.1.</span> <span class="toc-text">切换到用户目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加以下快捷方式与变量"><span class="toc-number">4.2.</span> <span class="toc-text">添加以下快捷方式与变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使配置生效"><span class="toc-number">4.3.</span> <span class="toc-text">使配置生效</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
 
 
           </div>
@@ -206,18 +402,27 @@
       	</div>
     </div>
   </div> 
+<div calss="count-span">
+    <span id="busuanzi_container_site_pv">
+        总访问量: <span id="busuanzi_value_site_pv"></span>|
+    </span>
+    <span id="busuanzi_container_site_uv">
+        总访客: <span id="busuanzi_value_site_uv"></span>
+    </span>
+</div>
+  
 </footer>
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: true
@@ -274,7 +479,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">linux环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">育儿</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -282,15 +499,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">tag</a>
               </li>
             
             <div class="clearfix"></div>
